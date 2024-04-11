@@ -1,0 +1,86 @@
+{% extends 'sim52/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<div class="col-md-12 mx-auto">
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <div class="col-7 mx-auto m-5">
+                <img src="/static/img/img/ubuntu-crossbones.jpg" class="imgpage" alt="INHOUSE_SENA" />
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 mt-5">
+            <br><br>
+            <h1>
+                Queremos Saber...
+            </h1>
+            <h4>Esta app tiene las encuestas mas interesantes del mercado.</h4>
+            <h3 class="mt-5">Y son todas para que tu las respondas!!...</h3>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 mx-auto bodyy">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 p-5">
+            <br><br>
+            <div class="col-10 mx-auto">
+                <h1>
+                    Encuestas de la semana
+                </h1>
+                <h4>Encuentra la que mas te llame la atención y completala....</h4>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="col-7 mx-auto m-5">
+                <img src="/static/img/img/ubuntu-crossbones.jpg" class="imgpage" alt="INHOUSE_SENA" />
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="col-md-12 mx-auto ">
+    <div class="row">
+        <div class="col-lg-4 col-md-12 pt-4">
+            <div class="col-7 mx-auto m-5">
+                <img src="/static/img/img/ubuntu-crossbones.jpg" class="imgpage" alt="INHOUSE_SENA" />
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 p-4">
+            <br><br>
+            <div class="col-10 mx-auto">
+                <h1>
+                    Yo Quiero...
+                </h1>
+                <h4>Contestar encuestas</h4>
+            </div>
+            <div class="col-10 mx-auto">
+                <a class="btn btn-success mt-4 ms-5" href="{% url 'register' %}">Es Mi Primera Vez</a>
+            </div>
+            <div class="col-10 mx-auto">
+                <a class="btn btn-success mt-4 ms-5 mb-5" href="{% url 'enter' %}">Ya Tengo Cuenta</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 p-4">
+            <br><br>
+            <div class="col-10 mx-auto">
+                <h1>
+                    Yo Estoy en Empresa...
+                </h1>
+                <h4>Tengo la información de la empresa con la que tengo mi contrato de etapa productiva.</h4>
+            </div>
+            <div class="col-10 mx-auto">
+                <a class="btn btn-success mt-4 ms-5" href="{% url 'register' %}">Es Mi Primera Vez</a>
+            </div>
+            <div class="col-10 mx-auto">
+                <a class="btn btn-success mt-4 ms-5 mb-5" href="{% url 'enter' %}">Ya Tengo Cuenta</a>
+            </div>
+        </div>     
+    </div>
+</div>
+
+{% endblock %}

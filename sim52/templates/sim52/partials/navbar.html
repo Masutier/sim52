@@ -1,0 +1,38 @@
+{% load static %}
+
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SIM52</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item btnbar"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item btnbar"><a class="nav-link" href="{% url 'start_encuesta' %}">Crear Encuesta</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Polizas
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'privacy' %}">Poliza de Privacidad</a></li>
+                        <li><a class="dropdown-item" href="{% url 'condiciones' %}">Condiciones de Uso</a></li>
+                        <li><a class="dropdown-item" href="{% url 'haveasData' %}">Haveas Data</a></li>
+                        
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav mt-2 mt-lg-0">
+                {% if user.is_authenticated %}
+                    <li class="nav-item btnbar"><a class="nav-link" href="{% url 'profile' %}">Hello {{user.username}}</a>
+                    <li class="nav-item btnbar"><a class="nav-link" href="{% url 'userLogout' %}">OUT</a></li>
+                {% else %}
+                    <li class="nav-item navtext"><a class="nav-link" href="{% url 'register' %}">Primera Vez</a></li>
+                    <li class="nav-item navtext"><a class="nav-link" href="{% url 'enter' %}">ENTER</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

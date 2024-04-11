@@ -1,0 +1,60 @@
+{% extends 'sim52/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<div class="col-md-7 mx-auto mt-5 mb-5 pb-5 bodyx">
+    <div class="col-9 mx-auto">
+        <h1 class="c">Crear Encuesta</h1>
+
+        <form method="POST">
+        {% csrf_token %}
+
+            <div class="col-6 mx-auto mb-3">
+                <label for="FormControl0" class="form-label atxt0">Nombre de la Encuesta</label>
+                <input class="form-control" type="text" name="encuestaname" id="FormControl0">
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="FormControl1" class="form-label atxt0">Numero de Pregintas</label>
+                        <input class="form-control" type="text" name="numpreguntas" id="FormControl1" aria-labelledby="numpreguntas">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="FormControl2" class="form-label atxt0">Marcas</label>
+                        <input class="form-control" type="text" name="marcas" id="FormControl2" aria-labelledby="marcas">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-11 mx-auto mt-5 pb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-grid gap-2 mx-auto">
+                            <a class="btn btn-danger btn-block" onclick="goBack()">Cancelar</a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-grid gap-2 mx-auto">
+                            <button class="btn btn-success atxt0" type="submit" value="submit">Registrarme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock content %}
