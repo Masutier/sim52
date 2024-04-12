@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item btnbar"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-                <li class="nav-item btnbar"><a class="nav-link" href="{% url 'start_encuesta' %}">Crear Encuesta</a></li>
+                <li class="nav-item btnbar"><a class="nav-link" href="{% url 'start_encuesta_productiva' %}">Crear Encuesta Productiva</a></li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -29,7 +29,6 @@
                     <li class="nav-item btnbar"><a class="nav-link" href="{% url 'profile' %}">Hello {{user.username}}</a>
                     <li class="nav-item btnbar"><a class="nav-link" href="{% url 'userLogout' %}">OUT</a></li>
                 {% else %}
-                    <li class="nav-item navtext"><a class="nav-link" href="{% url 'register' %}">Primera Vez</a></li>
                     <li class="nav-item navtext"><a class="nav-link" href="{% url 'enter' %}">ENTER</a></li>
                 {% endif %}
             </ul>

@@ -1,9 +1,9 @@
 from django.db import models
 from django.forms import ModelForm
-from encuestas.models import *
+from .models import *
 
 
-class CreateEncuestaForm(ModelForm):
+class CreateEncuestaProductivaForm(ModelForm):
     class Meta:
-        model = Encuesta
+        model = EncuestaProductiva
         fields = '__all__'

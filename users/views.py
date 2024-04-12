@@ -38,7 +38,7 @@ def userLogout(request):
 
 
 @unauthenticated_user
-def register(request):
+def registerLectivo(request):
     form = UserRegisterForm()
 
     if request.method == 'POST':
@@ -49,7 +49,7 @@ def register(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
-            group = Group.objects.get(name='user_rol')
+            group = Group.objects.get(name='lectivo')
             user.groups.add(group)
             login(request, user)
             messages.success(request, f'El usuario se creo satisfactoriamente')
@@ -59,5 +59,30 @@ def register(request):
             return redirect("home")
 
     context = {'title':'Registro de Usuario', 'form':form}
-    return render(request, 'users/register.html', context)
+    return render(request, 'users/registerLectivo.html', context)
+
+
+@unauthenticated_user
+def registerProductivo(request):
+    form = UserRegisterForm()
+
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            group = Group.objects.get(name='productivo')
+            user.groups.add(group)
+            login(request, user)
+            messages.success(request, f'El usuario se creo satisfactoriamente')
+            return redirect("profile")
+        else:
+            messages.info(request, f'Algo no salio bien, Intentalo de nuevo')
+            return redirect("home")
+
+    context = {'title':'Registro de Usuario', 'form':form}
+    return render(request, 'users/registerProductivo.html', context)
 

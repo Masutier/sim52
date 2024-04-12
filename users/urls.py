@@ -9,8 +9,8 @@ urlpatterns = [
     path('enter', enter, name="enter"),
     path('userLogout', userLogout, name="userLogout"),
 
-    path('register', register, name="register"),
-
+    path('registerLectivo', registerLectivo, name="registerLectivo"),
+    path('registerProductivo', registerProductivo, name="registerProductivo"),
 
     path('password/reset_password/',
         auth_views.PasswordResetView.as_view(template_name='users/password/password_reset.html'),
@@ -24,6 +24,5 @@ urlpatterns = [
     path('password/reset_password_complete',
         auth_views.PasswordResetCompleteView.as_view(template_name='users/password/password_reset_done.html'),
         name='password_reset_complete'),
-
 
 ]

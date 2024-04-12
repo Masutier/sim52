@@ -1,0 +1,81 @@
+{% extends 'sim52/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<div class="col-md-7 mx-auto mt-5 mb-5 pb-5 bodyx">
+    <div class="col-9 mx-auto">
+        <h1 class="c">Registro de Aprendiz en Etapa Productiva</h1>
+
+        <form method="POST">
+        {% csrf_token %}
+
+            <div class="col-6 mx-auto mb-3">
+                <label for="FormControl0" class="form-label atxt0">Username</label>
+                <input type="text" name="username" class="form-control" id="FormControl0">
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="FormControl1" class="form-label atxt0">Nombre(s)</label>
+                        <input type="text" name="first_name" class="form-control" aria-labelledby="first_name">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="FormControl2" class="form-label atxt0">Apellidos</label>
+                        <input type="text" name="last_name" class="form-control" aria-labelledby="last_name">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="FormControl3" class="form-label atxt0">Correo Electrónico</label>
+                <input class="form-control" type="email" name="email" id="FormControl3" placeholder="name@example.com">
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="mb-2">
+                        <label for="inputPassword1" class="form-label atxt0">Contraseña</label>
+                        <input type="password" name="password1" class="form-control" aria-labelledby="inputPassword1">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-2">
+                        <label for="inputPassword2" class="form-label atxt0">Confirmar Contraseña</label>
+                        <input type="password" name="password2" class="form-control" aria-labelledby="inputPassword2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-11 mx-auto mt-5 pb-5">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-grid gap-2 mx-auto">
+                            <a class="btn btn-danger btn-block" onclick="goBack()">Cancelar</a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-grid gap-2 mx-auto">
+                            <button class="btn btn-success atxt0" type="submit" value="submit">Registrarme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock content %}

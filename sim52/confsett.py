@@ -17,7 +17,8 @@ def localSett(BASE_DIR):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'sim52',
-        'encuestas',
+        'lectivas',
+        'productivas',
         'users',
     ]
     
@@ -38,7 +39,8 @@ def prodSett(BASE_DIR):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'sim52',
-        'encuestas',
+        'lectivas',
+        'productivas',
         'users',
     ]
 
