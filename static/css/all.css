@@ -31,10 +31,13 @@
     color: rgb(194, 194, 242);
     height: 3px !important;
 }
-.sticky {
+div.sticky {
+    position: -webkit-sticky;
     position: sticky;
-    top: 10px;
-}
+    top: 0;
+    padding: 50px;
+    font-size: 20px;
+  }
 .lists{
     list-style-type: none;
 }

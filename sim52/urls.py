@@ -11,8 +11,7 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('users.urls')),
-    #path('', include('lectivas.urls')),
-    path('', include('productivas.urls')),
+    path('', include('encuestas.urls')),
 
     path('', home, name='home'),
     path('privacy', privacy, name='privacy'),

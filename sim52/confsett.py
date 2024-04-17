@@ -4,7 +4,7 @@ from django.conf import settings
 
 def localSett(BASE_DIR):
     # entorno de desarrollo
-    with open("/home/gabriel/prog/json_config/dj_plan.json") as config_file:
+    with open("/home/ubunto/prog/json_config/sim52.json") as config_file:
         config = json.load(config_file)
     
     ALLOWED_HOSTS = ['localhost']
@@ -17,8 +17,7 @@ def localSett(BASE_DIR):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'sim52',
-        'lectivas',
-        'productivas',
+        'encuestas',
         'users',
     ]
     
@@ -26,7 +25,7 @@ def localSett(BASE_DIR):
 
 def prodSett(BASE_DIR):
     # entorno de produccion
-    with open("/etc/dj_plan.json") as config_file:
+    with open("/etc/sim52.json") as config_file:
         config = json.load(config_file)
 
     ALLOWED_HOSTS = ['localhost', 'url hosting', '172.17.125.17']
@@ -39,8 +38,7 @@ def prodSett(BASE_DIR):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'sim52',
-        'lectivas',
-        'productivas',
+        'encuestas',
         'users',
     ]
 

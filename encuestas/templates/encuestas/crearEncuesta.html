@@ -1,0 +1,675 @@
+{% extends 'sim52/layout.html' %}
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<div class="col-11 mx-auto mt-5 mb-5 pb-5 ">
+    <div class="row">
+        <div class="col-7 mx-auto ms-5 p-5 bodyx">
+            <h1 class="c">Crear Encuesta</h1>
+
+            <form method="POST">
+            {% csrf_token %}
+
+                <div class="col-12">
+                    <div class="col-6 mx-auto mb-3">
+                        <label for="FormControln" class="form-label atxt0">Nombre de la Encuesta</label>
+                        <input class="form-control" type="text" name="nombreEncuesta" id="FormControln">
+                    </div>
+
+                    <div class="col-6 mx-auto mb-5">
+                        <label for="FormControlt" class="form-label atxt0">Tema</label>
+                        <input class="form-control" type="text" name="temaEncuesta" id="FormControlt" aria-labelledby="numpreguntas">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="col-12 mt-5">
+                    <h4>Pregunta 1</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl0" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl0">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl1" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select example">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 2</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 3</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 4</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+
+                    <hr>
+
+                    <h4>Pregunta 5</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 6</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 7</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 8</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 9</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 10</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 11</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 12</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 13</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 14</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 15</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 16</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 17</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 18</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 19</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <hr>
+
+                    <h4>Pregunta 20</h4>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-6">
+                            <label for="FormControl2" class="form-label atxt0">Pregunta</label>
+                            <input class="form-control" type="text" name="pregunta" id="FormControl2">
+                        </div>
+                        <div class="col-6">
+                            <label for="FormControl3" class="form-label atxt0">Tipo de Pregunta</label>
+                            <select class="form-select" name="tipoPregunta" aria-label="Default select">
+                                <option value="0">(Escoge una respuesta)</option>
+                                <option value="1">Varias opciones y una sola eleccion</option>
+                                <option value="2">Varias opciones y varias elecciones</option>
+                                <option value="3">Calificacion de 1 a 5</option>
+                                <option value="4">Calificacion de 1 a 10</option>
+                                <option value="5">Desicion si/no</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-8 mx-auto mb-4 c">
+                        <h6>Si el tipo de pregunta es de varias opciones, describa cada opcion</h6>
+                        <input class="form-control form-control-sm" type="text" placeholder="Primera Opcion" name="opcion1" aria-label="opcion1">
+                        <input class="form-control form-control-sm" type="text" placeholder="Segunda Opcion" name="opcion2" aria-label="opcion2">
+                        <input class="form-control form-control-sm" type="text" placeholder="Tercera Opcion" name="opcion3" aria-label="opcion3">
+                        <input class="form-control form-control-sm" type="text" placeholder="Cuarta Opcion" name="opcion4" aria-label="opcion4">
+                        <input class="form-control form-control-sm" type="text" placeholder="Quinta Opcion" name="opcion5" aria-label="opcion5">
+                    </div>
+
+                    <div class="col-lg-11 mx-auto mt-5 pb-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-grid gap-2 mx-auto">
+                                    <a class="btn btn-danger btn-block" onclick="goBack()">Cancelar</a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-grid gap-2 mx-auto">
+                                    <button class="btn btn-success atxt0" type="submit" value="submit">Registrarme</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="col-4 mx-auto">
+            <div class="sticky">
+                <h1 class="c">Instrucciones</h1>
+                <h3>Tipo de pregunta</h3>
+                <h4>Estas opciones son las que determinan el tipo de respuesta que requiere la pregunta que se esta haciedo</h4>
+                <ul class="lists">
+                    <li>Varias opciones y una sola eleccion</li>
+                    <li>Varias opciones y varias elecciones</li>
+                    <li>Calificacion de 1 a 5</li>
+                    <li>Calificacion de 1 a 10</li>
+                    <li>Desicion si/no</li>
+                </ul>
+                <h4>Si el tipo de pregunta es de varias opciones, hay que describir las opciones a la pregunta</h4>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+{% endblock content %}
